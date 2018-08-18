@@ -14,7 +14,7 @@ class ApplicationController < Sinatra::Base
       @user = User.find_by(username: params[:username])
       if @user
       else
-          redirect to :error
+          erb :error
       end
   end
 
